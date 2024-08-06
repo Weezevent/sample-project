@@ -16,7 +16,6 @@ class OrganizationRelatedMixin:
 
     def initial(self, *args, **kw):
         super().initial(*args, **kw)
-        print('pass here')
         if 'organization_id' in self.kwargs:
             self.organization = get_object_or_404(Organization.objects.all(), pk=self.kwargs['organization_id'])
         else:

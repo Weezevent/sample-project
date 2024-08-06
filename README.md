@@ -5,6 +5,7 @@
 ### Build the project
   ```shell
   docker compose build
+  docker compose --rm run web python manage.py migrate
   ```
 
 ### Launch
@@ -14,8 +15,7 @@
 
 ### Migrations
   ```shell
-  docker compose run sample makemigrations
-  docker compose run sample migrate
+  docker compose --rm run web python manage.py makemigrations
   ```
 
 ### Unit test
